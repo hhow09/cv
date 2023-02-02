@@ -1,0 +1,117 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% hyperlinks
+\usepackage{hyperref} 
+
+% remove hyperlink box
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+
+% Set applicant's personal data for header
+\name{ChihHao Huang}
+\links{\href{https://www.linkedin.com/in/hhow09/}{linkedin.com/in/hhow09} \linebreak \href{https://github.com/hhow09}{github.com/hhow09}}
+\contacts{(+886) 958-427851 \linebreak hhow09@gmail.com}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+
+	\begin{cvsection}{Technical Skills}
+		\begin{cvsubsection}{}{}{}	
+			\begin{description}
+			\item Language: Typescript, Javascript, Golang, Python, SQL, Shell Script
+			\item Backend: Distributed System, Message Queue, Nest.js, GraphQL, RESTful API, Express
+			\item Frontend: React, Redux, Jest, React Hook, Saga, Webpack
+			\item Infrastructure: Kubernetes, Docker, Prometheus, Grafana, Elastic Search
+			\item Database: PostgreSQL, Redis, TypeORM
+			\end{description}
+		\end{cvsubsection}
+	\end{cvsection}	
+
+	% Print the content
+	\begin{cvsection}{Work Experience}
+		\begin{cvsubsection}{Software Engineer, Full Stack}{\href{https://crypto.com/}{Crypto.com}}{Jun, 2022 - Jan, 2023}
+			\href{https://crypto.com/nft}{NFT marketplace}
+			\begin{itemize}
+				\item Implemented cross platform NFT trading statistics integration.
+				\item Generated a new source of profit with payment integration of NFT minting flow.
+				\item Established website localization for global user growth.
+				\item Improved server performance with data loader (N+1 problem), Redis cache and client-side cache.
+				\item Tech stack: Typescript, Nest.js, PostgreSQL, TypeORM, Redis, GraphQL, React, BullMQ
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Engineer, Full Stack}{\href{https://www.houzz.com/}{Houzz Inc.}}{Jul, 2021 - May, 2022}	
+			Service Infrastructure Team
+			\begin{itemize}
+				\item Maintained frontend server and in-house CI/CD system.
+				\item Reduced CI/CD time of Node.js server by 60\% with distributed Webpack and job scheduling optimization.
+				\item Improved user story traceability with new functionality of cross-platform event tracking SDK.
+				\item Improved readability and maintainability of cluster configurations by adopting YAML templating tools.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Engineer, Frontend}{\href{https://rayark.com/}{Rayark Inc.}}{Dec, 2020 - Jun, 2021}		
+			\begin{itemize}
+				\item Developed multiple game official websites and admin interfaces.
+				\item Improved 40\% Lighthouse score (page speed) with optimization including: lazy loading, automated image optimization, rendering optimization.
+				\item Tech stack: React, Redux, Hugo
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Engineer, Frontend}{YJ Tech}{Aug, 2020 - Dec, 2020}
+			\begin{itemize}
+				\item Developed admin interface with single-page application (React).
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Taipei, Taiwan}{National Taiwan University}{2011 -- 2017}
+			\begin{itemize}
+				\item M.S.E. in Graduate Institute of Electronic Engineering, 2017.
+				\item B.S.E. in Electrical and Electronics Engineering, 2015.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Personal Projects}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+				\item \textbf{\href{https://github.com/hhow09/simple_bank}{Simple Bank}} (Golang / PostgreSQL)
+				\item \textbf{\href{https://avocadotaiwan.com}{Avocado Taiwan}} (Next.js / Firestore)
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+\end{document}
+

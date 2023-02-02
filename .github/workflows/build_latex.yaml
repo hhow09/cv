@@ -1,0 +1,28 @@
+name: Build LaTeX document
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+  workflow_call:
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: mcdowellcv.tex
+          compiler: lualatex
+          extra_fonts: |
+            timesnewroman.ttf
+            timesnewromanbd.ttf
+            timesnewromani.ttf
+            timesnewromanbi.ttf
+      - name: Rename file 
+        run: mv mcdowellcv.pdf cv.pdf
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cv
+          path: cv.pdf
