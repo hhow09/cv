@@ -7,6 +7,7 @@ on:
       - Build LaTeX document
     types:
       - completed
+    branches: [master]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
